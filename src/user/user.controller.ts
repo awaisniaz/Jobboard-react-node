@@ -8,12 +8,12 @@ export class UserController {
   constructor(private readonly userService: UserService) {}
 
   @Post('signup')
-  create(@Body() createUserDto: CreateUserDto) {
-    return this.userService.create(createUserDto);
+  signup(@Body() createUserDto: CreateUserDto) {
+    return this.userService.signup(createUserDto);
   }
 
   @Post('login')
   login() {
-    return this.userService.findAll();
+    return this.userService.login();
   }
 }
